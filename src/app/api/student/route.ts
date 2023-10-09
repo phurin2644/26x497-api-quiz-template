@@ -9,7 +9,7 @@ export type StudentGetResponse = {
 
 export const GET = async () => {
   const prisma = getPrisma();
-
+  const task = await prisma.student.findMany()
   //2. Display list of student
   // const students = await prisma...
 
